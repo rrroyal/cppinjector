@@ -14,8 +14,7 @@ DWORD getProcess(char* processName) {
 
 			return dwPID;
 		}
-	}
-	while (Process32Next(hPID, &procEntry));
+	} while (Process32Next(hPID, &procEntry));
 }
 
 int main() {
@@ -53,5 +52,5 @@ int main() {
 	CloseHandle(hProcess);
 
 	// done
-	return 1;
+	return 0;
 }
